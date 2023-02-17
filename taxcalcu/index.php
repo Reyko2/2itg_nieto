@@ -121,7 +121,7 @@
                                 $annualTax = 130000+$excess*0.30;
                                 $monthlyTax = $annualTax/12;
                             }
-                            else if($salary >2000000.0 && $salary <= 8000000000.0)
+                            else if($salary >2000000.0 && $salary <= 8000000.0)
                             {
                                 $excess =  $salary-2000000.0;
                                 $annualTax = 490000+$excess*0.32;
