@@ -1,0 +1,205 @@
+body {
+    background-image: url("bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tax-calculator {
+    width: 500px;
+    margin: 100px auto;
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: calculator-entrance 0.5s ease-in-out;
+  }
+  
+  @keyframes calculator-entrance {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: green;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+   /*animation: input-group-entrance 0.5s ease-in-out;*/
+    animation-delay: 0.2s;
+  }
+  
+  @keyframes input-group-entrance {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: gray;
+  }
+  
+  input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 18px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out;
+    animation-delay: 0.4s;
+  }
+  
+ 
+  
+  button[type="submit"]:hover {
+    background-color: darkgreen;
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: gray;
+   /* animation: result-entrance 0.5s ease-in-out; */
+  }
+  
+
+  #tax-amount {
+    font-weight: bold;
+    color: green;
+  }
+
+  #income {
+    width:100%;
+  }
+
+  #tax-rate {
+    width:100%;
+  }
+
+
+
+
+  @import url('https://fonts.googleapis.com/css?family=Lato:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper{
+  display: inline-flex;
+  background: #fff;
+  height: 100px;
+  width: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 15px 15px;
+}
+.wrapper .option{
+  background: #fff;
+  height: 70%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot{
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4.2px;
+  width: 12px;
+  height: 12px;
+  background: #0f693c;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+  border-color: #1f8a1e;
+  background: #1bcd2a;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot{
+  background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 20px;
+  color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+  color: #fff;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
